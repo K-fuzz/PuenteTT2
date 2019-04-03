@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+        <script type="text/javascript" src="Js.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <select id="directorio">
+        	<option selected="selected">Selecciona un directiorio</option>
+        	<option value="cordova.file.cacheDirectory">Cache directory</option>
+        	<option value="cordova.file.dataDirectory">Data directory</option>
+        	<option value="cordova.file.externalRootDirectory">External Root directory</option>
+        	<option value="cordova.file.externalCacheDirectory">External Cache directory</option>
+        	<option value="cordova.file.externalDataDirectory">External Data directory</option>
+        </select>
+        <button onclick="pru()"></button>
+        <br><br>
+        <input id="nombre" type="text" name="Nombre" value="Nonmbre del archivo" onclick="value=''">
+        <br>
+        <p>Texto del fichero</p>
+        <textarea id="texto" style="height: 100px"></textarea>
+        <br><br>
+        <button id="Abrir" onclick="create()">Abrir/Crear</button>
+        <button id="Leer">Leer</button>
+        <button id="Escribir">Escribir</button>
+        <button id="Borrar">Borrar</button>
+    </body>
+</html>
