@@ -38,7 +38,10 @@
 		alert("vas a leer texto")
 		fileEntry.file(LeerOK, LeerError)
 
-		function LeerOK (file){
+
+	};
+
+	function LeerOK (file){
 			var reader = new FileReader();
 			reader.onloadend = function(e){alert(this.result);};
 			reader.readAsText(file); 
@@ -46,7 +49,6 @@
 			
 		function LeerError(){alert("Error al leer el archivo")};
 
-	};
 
 
 	var dataObj
