@@ -45,6 +45,7 @@
 
 	};
 
+
 	var dataObj = document.getElementById('texto').value
 
 	function escribir(fileEntry, dataObj){
