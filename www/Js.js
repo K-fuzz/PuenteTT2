@@ -28,12 +28,18 @@
 	function crear(){
 		alert("PRUEBA")
 
-        directorios();
-
-        window.resolveLocalFileSystemURL(ruta, function (dirEntry){alert('fichero creado: '+ dirEntry.name);
+        window.resolveLocalFileSystemURL(cordova.file.dataDirectory, function (dirEntry){alert('Directorio: '+ dirEntry.name);
 
         dirEntry.getFile(fileName, {create: true, exclusive: false}, function(fileEntry){alert("Creado");}
         ,function onErrorLoadFs(){alert("Error fs")})}  )};
+
+
+
+
+
+
+
+
 
 		
 			
