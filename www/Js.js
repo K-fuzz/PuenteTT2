@@ -13,8 +13,8 @@
 	function crear(){
 		filename = document.getElementById('nombre').value
 		selector = document.getElementById('selected')
-         ruta = selector[selector.selectedIndex].value;
-         fileName = document.getElementById('nombre').value
+        ruta = selector[selector.selectedIndex].value;
+        fileName = document.getElementById('nombre').value
 
 
         if (ruta == "cordova.file.cacheDirectory"){ruta = cordova.file.cacheDirectory}
@@ -43,6 +43,29 @@
 			reader.readAsText(file);};
 		function LeerError(){alert("Error al leer el archivo")}
 
+	};
+
+	var dataObj = document.getElementById('texto').value
+
+	function escribir(fileEntry, dataObj){
+		var dataObj = document.getElementById('texto').value
+		fileEntry.createWriter(funcionEscribir);
+		function funcionEscribir(fileWriter){
+			fileWriter.onwriteend = function(){
+				alert("Escritura correcta")
+				readFile(fileEntry);
+			};
+
+			fileWriter.onerror= function(e){
+				alert("Error de escritura")
+			};
+
+		if (!dataObj) { 
+			dataObj = new Blob(['No has introducido texto'],{type: 'text/plain'});
+		}
+
+		fileWriter.write(dataObj);
+		};
 	}
 
 
