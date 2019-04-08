@@ -10,16 +10,15 @@
 
 	function crear(){
 		alert("PRUEBA")
+		var directorio = cordova.file.dataDirectory
 
-        window.resolveLocalFileSystemURL(cordova.file.dataDirectory, 
+        window.resolveLocalFileSystemURL(cordova.file.dataDirectory, resolveok) };
 
-        function (dirEntry){alert('Directorio: '+ dirEntry.name);
-        dirEntry.getFile('prueba.txt', {create: true, exclusive: false}, 
+    function resolveok(){
+    	directorio.getFile('prueba.txt',{create: true, exclusive: true}, function ok(){alert("Bien")} , function notok(){alert("mal")}
 
-        function(fileEntry){alert("Creado");}
 
-        ,function onErrorLoadFs(){alert("Error fs")})}  )};
-
+    };
 
 
 
