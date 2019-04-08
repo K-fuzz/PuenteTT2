@@ -8,7 +8,9 @@
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
-        <select id="directorio">
+
+
+        <select id="selected">
         	<option selected="selected">Selecciona un directiorio</option>
         	<option value="cordova.file.cacheDirectory">Cache directory</option>
         	<option value="cordova.file.dataDirectory">Data directory</option>
@@ -16,16 +18,19 @@
         	<option value="cordova.file.externalCacheDirectory">External Cache directory</option>
         	<option value="cordova.file.externalDataDirectory">External Data directory</option>
         </select>
-        <button onclick="pru()"></button>
+       
         <br><br>
-        <input id="nombre" type="text" name="Nombre" value="Nonmbre del archivo" onclick="value=''">
+        <input id="nombre" type="text" value="Nonmbre del archivo" onclick="value=''">
         <br>
         <p>Texto del fichero</p>
         <textarea id="texto" style="height: 100px"></textarea>
         <br><br>
-        <button id="Abrir" onclick="create()">Abrir/Crear</button>
+        <button id="Abrir" onclick="crear()">Abrir/Crear</button>
         <button id="Leer">Leer</button>
         <button id="Escribir">Escribir</button>
         <button id="Borrar">Borrar</button>
     </body>
+    <script type="text/javascript">
+        
+    </script>
 </html>
