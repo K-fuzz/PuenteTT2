@@ -23,16 +23,27 @@
         else if (ruta == "cordova.file.externalCacheDirectory"){ ruta = cordova.file.externalCacheDirectory}
         else if (ruta == "cordova.file.externalDataDirectory"){ ruta = cordova.file.externalDataDirectory}
 
-        window.resolveLocalFileSystemURL(ruta, resolveok, function e (){alert("Error")}) };
+        window.resolveLocalFileSystemURL(ruta, resolveok, function(){alert("Error")}) };
 
     function resolveok(directorio){
     	alert(directorio);
     	directorio.getFile('prueba.txt',{create: true, exclusive: true}, 
 
-    	function ok(){alert("El archivo se ha creado correctamente")} , function notok(){alert("Ha ocurrido un error al crear el archivo.")})
+    	function ok(){alert("El archivo se ha creado correctamente")} , 
+    	function notok(){alert("Ha ocurrido un error al crear el archivo.")})
+	};
 
 
-    };
+	function leer(fileEntry){
+		fileEntry.file(LeerOK, LeerError)
+
+		function LeerOK(file){
+			var reader = new FileReader();
+			reader.onloadend = function(e){alert(this.result);};
+			reader.readAsText(file);};
+		function LeerError(){alert("Error al leer el archivo")}
+
+	}
 
 
 
