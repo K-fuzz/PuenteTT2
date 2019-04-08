@@ -35,6 +35,7 @@
 
 
 	function leer(fileEntry){
+		alert("vas a leer texto")
 		fileEntry.file(LeerOK, LeerError)
 
 		function LeerOK (file){
@@ -42,6 +43,7 @@
 			reader.onloadend = function(e){alert(this.result);};
 			reader.readAsText(file); 
 			alert("Lectura de archivo correcta")};
+			
 		function LeerError(){alert("Error al leer el archivo")};
 
 	};
@@ -50,7 +52,9 @@
 	var dataObj
 
 	function escribir(fileEntry, dataObj){
+		alert("vas a escribir texto")
 		dataObj = document.getElementById('texto').value
+		alert(dataObj)
 		fileEntry.createWriter(funcionEscribir);
 		function funcionEscribir(fileWriter){
 			fileWriter.onwriteend = function(){
