@@ -46,10 +46,10 @@
 	};
 
 
-	var dataObj = document.getElementById('texto').value
+	var dataObj
 
 	function escribir(fileEntry, dataObj){
-		var dataObj = document.getElementById('texto').value
+		dataObj = document.getElementById('texto').value
 		fileEntry.createWriter(funcionEscribir);
 		function funcionEscribir(fileWriter){
 			fileWriter.onwriteend = function(){
