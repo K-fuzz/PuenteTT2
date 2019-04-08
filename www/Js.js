@@ -15,7 +15,7 @@
         window.resolveLocalFileSystemURL(cordova.file.dataDirectory, resolveok) };
 
     function resolveok(){
-    	directorio.getFile('prueba.txt',{create: true, exclusive: true}, function ok(){alert("Bien")} , function notok(){alert("mal")}
+    	directorio.getFile('prueba.txt',{create: true, exclusive: true}, function ok(){alert("Bien")} , function notok(){alert("mal")})
 
 
     };
