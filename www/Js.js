@@ -37,11 +37,12 @@
 	function leer(fileEntry){
 		fileEntry.file(LeerOK, LeerError)
 
-		function LeerOK(file){
+		function LeerOK (file){
 			var reader = new FileReader();
 			reader.onloadend = function(e){alert(this.result);};
-			reader.readAsText(file);};
-		function LeerError(){alert("Error al leer el archivo")}
+			reader.readAsText(file); 
+			alert("Lectura de archivo correcta")};
+		function LeerError(){alert("Error al leer el archivo")};
 
 	};
 
