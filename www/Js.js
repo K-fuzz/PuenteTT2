@@ -43,7 +43,7 @@
 			reader.readAsText(file);};
 		function LeerError(){alert("Error al leer el archivo")}
 
-	}
+	};
 
 
 
