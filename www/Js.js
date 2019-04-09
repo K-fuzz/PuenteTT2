@@ -34,10 +34,13 @@
 	};
 
 
+// Esta es la función que da problemas, la de leer. 
+
+
 	function leer(fileEntry){
 		
 		fileEntry.file(LeerOK, LeerError);
-		alert("vas a leer texto");
+		alert("vas a leer texto");   //En el navegador llega a lanzar hasta este alert. Pero en android nada de nada.
 
 	};
 
@@ -45,7 +48,7 @@
 			var reader = new FileReader();
 			reader.onloadend = function(e){alert(this.result);};
 			reader.readAsText(file); 
-			alert("Lectura de archivo correcta")};
+			alert("Lectura de archivo correcta")};					// a estas dos funciones ya ni llega. (ni la de LeerError)
 			
 	function LeerError(){alert("Error al leer el archivo")};
 
@@ -74,7 +77,7 @@
 
 		fileWriter.write(dataObj);
 		};
-	}
+	};
 
 
 
