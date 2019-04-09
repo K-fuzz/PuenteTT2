@@ -35,19 +35,19 @@
 
 
 	function leer(fileEntry){
-		alert("vas a leer texto")
-		fileEntry.file(LeerOK, LeerError)
-
+		
+		fileEntry.file(LeerOK, LeerError);
+		alert("vas a leer texto");
 
 	};
 
-	function LeerOK (file){
+	function LeerOK(file){
 			var reader = new FileReader();
 			reader.onloadend = function(e){alert(this.result);};
 			reader.readAsText(file); 
 			alert("Lectura de archivo correcta")};
 			
-		function LeerError(){alert("Error al leer el archivo")};
+	function LeerError(){alert("Error al leer el archivo")};
 
 
 
